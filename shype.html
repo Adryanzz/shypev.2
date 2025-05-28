@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHYPE.V2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .app-wrapper {
+      background: #1a1a1a;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 30px;
+      max-width: 300px;
+      width: 90%;
+      filter: drop-shadow(0 0 8px rgba(169, 118, 62, 0.7));
+      animation: fadeInLogo 1.2s ease forwards;
+    }
+
+    @keyframes fadeInLogo {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .menu-buttons {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .menu-button {
+      display: inline-block;
+      padding: 12px 26px;
+      margin: 10px;
+      background: #a9763e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 28px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 3px 8px rgba(169, 118, 62, 0.5);
+    }
+
+    .menu-button:hover {
+      background: #d3b47d;
+      color: #1a1a1a;
+      transform: scale(1.05);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #2a2a2a;
+      border-radius: 22px;
+      width: 260px; /* Fixed width for cards */
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(169, 118, 62, 0.8);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover;
+      border-bottom: 3px solid #a9763e;
+      transition: filter 0.4s ease;
+    }
+
+    .card:hover img {
+      filter: brightness(1.1);
+    }
+
+    .card h3 {
+      margin: 15px 0 12px;
+      font-size: 20px;
+      color: #ffd591;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+
+    .about {
+      background: #2a2a2a;
+      border-radius: 18px;
+      padding: 24px;
+      margin: 35px 0; /* Adjusted margin for spacing */
+      box-shadow: inset 0 0 10px #a9763e44;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .about h4 {
+      margin-bottom: 14px;
+      font-size: 22px;
+      color: #ffd591;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .download-button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 14px 28px;
+      background: #a9763e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      width: 240px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 5px 15px rgba(169, 118, 62, 0.7);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .download-button:hover {
+      background: #d3b47d;
+      color: #1a1a1a;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+      }
+
+      .card {
+        width: 220px; /* Adjust card width for smaller screens */
+      }
+
+      .menu-button {
+        padding: 10px 20px;
+        margin: 8px;
+      }
+
+      .app-wrapper {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/Desain-tanpa-judul-9.png" alt="SHYPE.my.id" class="logo" />
+
+    <div class="menu-buttons">
+      <a href="https://shype.my.id/consultan" class="menu-button">Contact Me</a>
+      <a href="mailto:shype@gmail.com" class="menu-button">Email</a>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/260x180?text=Shype+Film" alt="Shype Film"/>
+        <h3>Film</h3>
+        <a href="https://sumselhype.my.id/film" class="card-button">Masuk</a>
+        <p></p>
+      </div>
+      <div class="card">
+        <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-11-at-08.58.38.jpg" alt="Shype IG"/>
+        <h3>SOCIAL MEDIA</h3>
+        <a href="https://www.instagram.com/sumselhypemyid/" class="card-button">Masuk</a>
+        <p></p>
+      </div>
+      <div class="card">
+        <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/Timothy-Ronald-Bikin-Crypto-Party-Terbesar-di-Dunia-Isinya-Sultan-Semua-8-1.png" alt="Shype News"/>
+        <h3>NEWS</h3>
+        <a href="https://sumselhype.my.id/" class="card-button">Masuk</a>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="about">
+      <h4>Team Work:</h4>
+      <p>Berikut adalah anggota tim kami yang berkontribusi dalam pengembangan aplikasi ini.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card" style="margin: 0 auto;"> <!-- Centering the card -->
+        <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/s1.png" alt="Mohamad Adriansah"/>
+        <h3>Mohamad Adriansah</h3>
+        <p>Founder</p>
+      </div>
+      <div class="card">
+        <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/s2.png" alt="Imam Makhmudin"/>
+        <h3>Imam Makhmudin</h3>
+        <p>Co Founder</p>
+      </div>
+      <div class="card">
+        <img src="https://sumselhype.my.id/wp-content/uploads/2025/05/s3.png" alt="Ahmad Rizal Muzaka"/>
+        <h3>Ahmad Rizal Muzaka</h3>
+        <p>Redaksi Media</p>
+      </div>
+    </div>
+    
+    <div class="about">
+      <h4>Tentang Shype v2:</h4>
+      <p>SHYPE adalah aplikasi multifungsi yang menghadirkan layanan Media Berita, Media Film, dan Media Sosial dalam satu platform. Dapatkan berita terkini, tonton film favorit, dan berinteraksi langsung tanpa perlu berganti aplikasi. Semua kebutuhan digital Anda, cukup di SHYPE!</p>
+    </div>
+
+    <a href="https://shype.my.id/shype.v2.apk" class="download-button">Download</a>
+  </div>
+
+</body>
+</html>
